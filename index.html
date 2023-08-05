@@ -14,9 +14,35 @@
                 width: 100dvw;
                 height: 100dvh;
             }
+
+            .protip {
+                width: max-content;
+                position: fixed;
+                background-color: #1c1c1c;
+                padding: .3em;
+                border-radius: 0 0 .3em 0;
+                top: 0;
+                left: 0;
+                color: #fff;
+            }
+
+            .protip b {
+                color: #9ED2BE;
+            }
+
+            .protip a {
+                text-decoration: none;
+                color: #fff;
+                transition: color .2s ease-in-out;
+            }
+
+            .protip a:hover {
+                color: #0084ff;
+            }
           </style>
     </head>
     <body>
         <canvas id="webgl-canvas"></canvas>
+        <div class="protip"><b>Author:</b> <a href="https://ayushsharma.me" target="_blank" rel="noreferrer noopener">Ayush Sharma</a> <span> | </span> <b>Protip:</b> <span>Right click to save the image</span></div>
     </body>
 </html>
