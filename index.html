@@ -15,34 +15,54 @@
                 height: 100dvh;
             }
 
-            .protip {
-                width: max-content;
+            .author, .protip {
                 position: fixed;
                 background-color: #1c1c1c;
                 padding: .3em;
-                border-radius: 0 0 .3em 0;
-                top: 0;
-                left: 0;
+                border-radius: .3em 0 0 0;
+                bottom: 0;
+                right: 0;
                 color: #fff;
             }
 
-            .protip b {
+            .author, .protip b {
                 color: #9ED2BE;
             }
 
-            .protip a {
+            .author {
+                left: 0;
+                right: unset;
+            }
+
+            .author a {
                 text-decoration: none;
                 color: #fff;
                 transition: color .2s ease-in-out;
             }
 
-            .protip a:hover {
+            .author a:hover {
                 color: #0084ff;
+            }
+
+            @media (max-width: 576px) {
+                .author {
+                    bottom: 1.5em;
+                    right: 0;
+                    text-align: center;
+                }
+
+                .protip {
+                    left: 0;
+                    text-align: center;
+                }
             }
           </style>
     </head>
     <body>
         <canvas id="webgl-canvas"></canvas>
-        <div class="protip"><b>Author:</b> <a href="https://ayushsharma.me" target="_blank" rel="noreferrer noopener">Ayush Sharma</a> <span> | </span> <b>Protip:</b> <span>Right click to save the image</span></div>
+        <div class="author">
+            <b>Author:</b> <a href="https://ayushsharma.me" target="_blank" rel="noreferrer noopener">Ayush Sharma</a>
+        </div>
+        <div class="protip"><b>Protip:</b> <span>Right click to save the image</span></div>
     </body>
 </html>
